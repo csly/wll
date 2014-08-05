@@ -12,9 +12,13 @@
   		<% end %>
   		
 	</p>
-<p> <%= @article.body %> </p>
+<p> <h3>Brief: </h3><%= @article.body %> </p>
+<p> <h3>Deadline: </h3><%= @article.dead_line %> </p>
+<p> <h3>Label: </h3><%= @article.label %> </p>
+<p> <h3>Website: </h3><%= @article.website %> </p>
+<br />
 <%= link_to "<< Back to Articles List", articles_path %>
 <% if logged_in? %>
-<%= link_to "Delete Article", article_path(@article), method: :delete, data: {confirm:"Are You Sure You Want To Delete This?"} %>
+
 <%= link_to "Edit", edit_article_path(@article) %>
 <% end %>

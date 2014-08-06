@@ -42,3 +42,5 @@ gem "paperclip"
 
 gem 'sorcery'
 
+gem 'acts-as-taggable-on' 
+

@@ -25,10 +25,17 @@
 		<%= f.label :website %><br />
 		<%= f.text_field :website %>
 	</p>
-	<p>
-		<%= f.label :tag_list %><br />
-		<%= f.text_field :tag_list %>
-	</p>
+	<p> <%= f.label :tags %>
+<%= f.text_field :tag_list %>
+	 </p>
+	 
+</p>
+	 <p><%= f.label :featured? %>
+	 <%= f.check_box :featured  %>
+
+</p>
+	 
+	 
 	<p>
 		<% if @article.image.exists? %>
         <%= image_tag @article.image.url %><br/>
@@ -41,3 +48,5 @@
 	</p>
 
 <% end %>
+
+ 

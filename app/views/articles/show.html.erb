@@ -1,24 +1,36 @@
 <h1> <%= @article.title %> </h1>
-<p>
-<%= link_to "Tags:", tags_path(@tag) %>
-<% @article.tags.each do |tag| %>
-<%= link_to tag.name, tag_path(tag) %>
-<% end %>
-</p>
+ 
 
 <p>
 		<% if @article.image.exists? %>
         <%= image_tag @article.image.url %><br/>
   		<% end %>
   		
-	</p>
-<p> <h3>Brief: </h3><%= @article.body %> </p>
-<p> <h3>Deadline: </h3><%= @article.dead_line %> </p>
-<p> <h3>Label: </h3><%= @article.label %> </p>
-<p> <h3>Website: </h3><%= @article.website %> </p>
-<br />
-<%= link_to "<< Back to Articles List", articles_path %>
-<% if logged_in? %>
+	</p><hr>
+ <h3>Brief </h3><hr><p class="main_article_body"><%= @article.body %> </p><br /><hr>
+<table width="100%">
+<tr>
+<td width="33%"><p> <h3>Deadline <span class="deet"><%= @article.dead_line %></span> </h3></p></td>
+<td width="33%"><p> <h3>Label<span class="deet"> <%= @article.label %> </span> </h3></p></td>
+<td width="33%"><p> <h3>Website <span class="deet"><a href="<%= @article.website %>"><%= @article.website %></a> </span> </h3></p></td>
+</tr>
+</table><hr>
 
-<%= link_to "Edit", edit_article_path(@article) %>
-<% end %>
+<p><h3>Tags <span class="deet"><% @article.tags.any? %>
+  <% @article.tags.each do |tag| %>
+  <%= link_to tag.name, tagged_url(:tag => tag.name) %>
+<% end %></span></h3></p>
+<hr>
+
+
+
+<br />
+<a href="../" class="myButton">Back To List</a>
+ <a href="<%= edit_article_path(@article) %>" class="myButton">Edit</a><br />
+<% if logged_in? %>
+ <% end %>
+
+
+ 
+
+

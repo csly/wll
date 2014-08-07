@@ -13,8 +13,7 @@ default_scope {order(created_at: :desc)}
 
 	def preview
 		body[0..300] + "..."
-	end
-
+	end 
 
  
  

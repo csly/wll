@@ -12,7 +12,7 @@
 <tr>
 <td width="33%"><p> <h3>Deadline <span class="deet"><%= @article.dead_line %></span> </h3></p></td>
 <td width="33%"><p> <h3>Label<span class="deet"> <%= @article.label %> </span> </h3></p></td>
-<td width="33%"><p> <h3>Website <span class="deet"><a href="<%= @article.website %>"><%= @article.website %></a> </span> </h3></p></td>
+<td width="33%"><p> <h3> <span class="deet"><a href="http://<%= @article.website %>">Website</a> </span> </h3></p></td>
 </tr>
 </table><hr>
 
@@ -24,10 +24,11 @@
 
 
 
-<br />
-<a href="../" class="myButton">Back To List</a>
- <a href="<%= edit_article_path(@article) %>" class="myButton">Edit</a><br />
+<br /><a href="../" class="myButton"><span>&nbsp;&lt; </span>Back To List</a>
+ 
 <% if logged_in? %>
+&nbsp;<a href="<%= edit_article_path(@article) %>" class="myButton">Edit</a><br />
+
  <% end %>
 
 

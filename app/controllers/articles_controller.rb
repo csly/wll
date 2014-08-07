@@ -4,7 +4,9 @@ class ArticlesController < ApplicationController
 	before_filter :require_login, only: [:new, :create, :edit, :update, :destroy]
 
 	def index
-		@articles = Article.all
+		@articles = Article.all.paginate(page: params[:page], per_page:5)
+
+     
   		 
 	end
 	def show
@@ -58,7 +60,7 @@ class ArticlesController < ApplicationController
   		end  
 	end
 
-	  
+
 
 
 

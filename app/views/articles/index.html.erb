@@ -18,8 +18,9 @@
 	</li>
   <% end %>
 </ul>
+<%= will_paginate @articles, :page_links => false %><br />
 <% if logged_in? %>
-<%= link_to "Create a New Article", new_article_path, class: 'new_article' %>
+<%= link_to "Create a New Article", new_article_path, class: 'myButton' %>
 <% end %>
 
  <br />

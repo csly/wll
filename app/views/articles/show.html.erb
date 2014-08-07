@@ -1,5 +1,5 @@
-<h1> <%= @article.title %> </h1>
- 
+<div class="contentshow"><h1 class="main_art_tit"> <%= @article.title %> </h1>
+ <br />
 
 <p>
 		<% if @article.image.exists? %>
@@ -7,14 +7,14 @@
   		<% end %>
   		
 	</p><hr>
- <h3>Brief </h3><hr><p class="main_article_body"><%= @article.body %> </p><br /><hr>
-<table width="100%">
-<tr>
-<td width="33%"><p> <h3>Deadline <span class="deet"><%= @article.dead_line %></span> </h3></p></td>
-<td width="33%"><p> <h3>Label<span class="deet"> <%= @article.label %> </span> </h3></p></td>
-<td width="33%"><p> <h3> <span class="deet"><a href="http://<%= @article.website %>">Website</a> </span> </h3></p></td>
-</tr>
-</table><hr>
+ <h3 class="brief">Brief </h3><hr><p class="main_article_body"><br /><%= @article.body %> </p><br /><hr> 
+
+<p> <h3>Deadline <span class="deet"><%= @article.dead_line %></span> </h3></p><hr>
+<p> <h3>Label<span class="deet"> <%= @article.label %> </span> </h3></p>
+<hr>
+ <p> <h3> LINKS <span class="deet"><a href="http://<%= @article.website %>">Website</a>  
+ <a href="http://<%= @article.facebook %>">Facebook</a>  <a href="http://<%= @article.twitter %>">Twitter</a> </span> </h3></p></td>
+ <hr>
 
 <p><h3>Tags <span class="deet"><% @article.tags.any? %>
   <% @article.tags.each do |tag| %>
@@ -22,7 +22,7 @@
 <% end %></span></h3></p>
 <hr>
 
-
+ <br />
 
 <br /><a href="../" class="myButton"><span>&nbsp;&lt; </span>Back To List</a>
  
@@ -30,8 +30,8 @@
 &nbsp;<a href="<%= edit_article_path(@article) %>" class="myButton">Edit</a><br />
 
  <% end %>
+ </div>
 
-
- 
+	 
 
 

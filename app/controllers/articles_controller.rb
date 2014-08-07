@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
 	include ArticlesHelper
 
+	http_basic_authenticate_with :name => "bucks", :password => "testing"
+
 	before_filter :require_login, only: [:new, :create, :edit, :update, :destroy]
 
 	def index

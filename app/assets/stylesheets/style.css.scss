@@ -2,9 +2,11 @@ $primary_color: #AAA;
 
 body {
   background-color: $primary_color;
+  width: 825px;
   font: {
     family: Verdana;
     size: 14px;
+
   }
 }
 
@@ -22,15 +24,25 @@ a {
 }
 
 #container {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
   background: #fff;
-  padding: 20px 40px;
+  padding: 20px 0px;
   border: solid 1px #e7e7e7;
-  margin-top: 20px;
+  margin-top: -20px;
+  min-height: 450px;
 }
 
 #content {
+min-width:80%;
+padding-left:80px;
+  clear: both;
+  padding-top: 20px;
+}
+
+.contentshow {
+padding-left:5px;
+  max-width:93%; 
   clear: both;
   padding-top: 20px;
 }

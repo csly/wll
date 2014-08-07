@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140806154614) do
+ActiveRecord::Schema.define(version: 20140807145507) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20140806154614) do
     t.string   "website"
     t.string   "priority"
     t.boolean  "featured"
+    t.string   "facebook"
+    t.string   "twitter"
   end
 
   create_table "authors", force: true do |t|

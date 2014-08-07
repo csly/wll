@@ -1,4 +1,4 @@
-<%= form_for(@article, html: {multipart: true}) do |f| %>
+<div class="contentshow"><%= form_for(@article, html: {multipart: true}) do |f| %>
 
 	<ul>
 	<% @article.errors.full_messages.each do |error| %>
@@ -25,6 +25,15 @@
 		<%= f.label :website %><br />
 		<%= f.text_field :website %>
 	</p>
+	<p>
+		<%= f.label :facebook %><br />
+		<%= f.text_field :facebook %>
+	</p>
+	<p>
+		<%= f.label :twitter %><br />
+		<%= f.text_field :twitter %>
+	</p>
+	
 	<p> <%= f.label :tags %>
 <%= f.text_field :tag_list %>
 	 </p>
@@ -49,4 +58,4 @@
 
 <% end %>
 
- 
+ </div>

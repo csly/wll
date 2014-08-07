@@ -1,6 +1,6 @@
-<h1> Who's Looking List </h1>
+<div class="whoslooking"> <img src="../whoslooking.png"> </div> 
 
- 
+ <br /> <br />
 
 <ul id="articles">
   <% @articles.each do |article| %>
@@ -11,16 +11,17 @@
 	<% if false %>
     	<h6><%= distance_of_time_in_words(article.created_at, Time.now) %> </h6> 
     <% end %>
-    <span class="date"><%= article.created_at.strftime('%A, %-d %B %Y ') %></span><br /><br />
+    <span class="date"><%= article.created_at.strftime('%A, %-d %B %Y ') %></span><div id="clear"></div><hr><br />
      <p class="article_main"><%= article.preview %><%= link_to "Read More", article_path(article) %></p>  
      <br /> 
-<hr>
+ 
+
 	</li>
   <% end %>
 </ul>
-<%= will_paginate @articles, :page_links => false %><br />
+<%= will_paginate @articles, :page_links => false %><br /><br />
 <% if logged_in? %>
-<%= link_to "Create a New Article", new_article_path, class: 'myButton' %>
+<%= link_to "Create a New Brief", new_article_path, class: 'myButton' %>
 <% end %>
 
  <br />

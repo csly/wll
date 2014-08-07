@@ -199,7 +199,10 @@ p.main_article_body {
 	font-size:0.9em;
 	line-height: 1.4em;
 	color: #8e8e8e;
+	max-width:100%;
 }
+
+
 span.deet {
 	color: #8e8e8e;
 	text-transform: none;
@@ -271,10 +274,37 @@ padding:20px;
 padding-right:180px;
 line-height:1em;
 font-weight:normal;
+text-transform: capitalize;
 color:#177CB5;
 position:relative; 
 font-size:2em;
  text-shadow: 1px 1px 1px #ddd;
+}
+
+h1.main_art_tit {
+ 
+margin: 0px;
+padding-top:10px;
+padding-bottom:10px; 
+padding-left:5px;
+line-height:1em;
+font-weight:bold;
+color:#177CB5;
+position:relative; 
+text-transform: capitalize;
+font-size:1.8em;
+ text-shadow: 1px 1px 1px #fff;
+ background-color:#eeeeee;
+ max-width:80%;
+}
+
+.whoslooking {
+ background-color:#eeeeee;
+max-width:93%;
+}
+
+.whoslooking img{
+	padding:10px;
 }
 
  
@@ -354,6 +384,7 @@ font-weight:bold;
 
 span.date {
 	font-size:80%;  
+	float:right; 
 }
 
 h3{
@@ -368,7 +399,6 @@ h3{
 font-size:1em;
 line-height:1.5em;
 margin:.2em 0 .5em;
-}
 
 }
 h6 {
@@ -470,7 +500,7 @@ position:relative;
 
  
 #articles li {
- 
+ background-color: ;
 padding:1em 0 .8em;
 margin-right:20px;
 font-size:1.2em;
@@ -488,10 +518,12 @@ position:relative;
 #articles li > a:first-child {
 
 font-weight:bold;
+float:left;
 display:block;
 color: #177cb4;
 text-shadow: 
          1px -1px 0px #fff;
+         text-transform: capitalize;
 padding-bottom:.1em; 
 }
 
@@ -815,4 +847,18 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
 box-shadow:0px 1px 0px rgba(255,255,255,0.5);
 -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccffffff,Positive=true)";
 filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccffffff,Positive=true);
+}
+
+div.bannerimg {
+	height: 408px;
+z-index: 999;
+visibility: visible;
+position: absolute;
+margin-top: 5px;
+margin-right: auto;
+padding-left: 5px; 
+}
+
+#clear {
+	clear: both;
 }

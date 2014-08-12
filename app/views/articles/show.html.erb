@@ -7,20 +7,61 @@
   		<% end %>
   		
 	</p><hr>
- <h3 class="brief">Brief </h3><hr><p class="main_article_body"><br /><%= @article.body %> </p><br /><hr> 
+ <h3 class="brief"><span class="labeldesc">Brief </span></h3><hr><p class="main_article_body"><br /><%= @article.body %><br /><br /><%= @article.biog %> </p><br /><hr> 
 
-<p> <h3>Deadline <span class="deet"><%= @article.dead_line %></span> </h3></p><hr>
-<p> <h3>Label<span class="deet"> <%= @article.label %> </span> </h3></p>
-<hr>
- <p> <h3> LINKS <span class="deet"><a href="http://<%= @article.website %>">Website</a>  
- <a href="http://<%= @article.facebook %>">Facebook</a>  <a href="http://<%= @article.twitter %>">Twitter</a> </span> </h3></p></td>
- <hr>
 
-<p><h3>Tags <span class="deet"><% @article.tags.any? %>
+
+<table width="93%">
+<tr>
+<td width="15%" valign="top"><h3><span class="labeldesc">Deadline </span></h3></td>
+<td width="85%" valign="top"><h3><span class="deet"><%= @article.dead_line %></span> </h3></td>
+</tr>
+</table>
+<table width="93%">
+<tr>
+<td width="100%"><hr></td>
+</tr>
+</table>
+<table width="93%">
+<tr>
+<td width="15%" valign="top"><h3><span class="labeldesc">Label </span></h3></td>
+<td width="85%" valign="top"><h3><span class="deet"><%= @article.label %></span> </h3></td>
+</tr>
+</table>
+<table width="93%">
+<tr>
+<td width="100%"><hr></td>
+</tr>
+</table>
+<table width="93%">
+<tr>
+<td width="15%" valign="top"><h3><span class="labeldesc">Links </span></h3></td>
+<td width="85%" valign="top"><h3><span class="deet"><a href="http://<%= @article.website %>">Website</a>  
+ <a href="http://<%= @article.facebook %>">Facebook</a>  <a href="http://<%= @article.twitter %>">Twitter</a></span> </h3></td>
+</tr>
+</table>
+<table width="93%">
+<tr>
+<td width="100%"><hr></td>
+</tr>
+</table>
+<table width="93%">
+<tr>
+<td width="15%" valign="top"><h3><span class="labeldesc">Tags </span></h3></td>
+<td width="85%" valign="top"><h3><span class="deet"><% @article.tags.any? %>
   <% @article.tags.each do |tag| %>
   <%= link_to tag.name, tagged_url(:tag => tag.name) %>
-<% end %></span></h3></p>
-<hr>
+<% end %></span></h3></td>
+</tr>
+
+
+</table>
+
+ 
+	 
+
+
+
 
  <br />
 
@@ -31,7 +72,4 @@
 
  <% end %>
  </div>
-
-	 
-
 

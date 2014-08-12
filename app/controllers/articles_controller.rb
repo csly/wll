@@ -6,9 +6,7 @@ class ArticlesController < ApplicationController
 	before_filter :require_login, only: [:new, :create, :edit, :update, :destroy]
 
 	def index
-		@articles = Article.all.paginate(page: params[:page], per_page:5)
-
-     
+		@articles = Article.featured_article + Article.unfeatured_article 
   		 
 	end
 	def show
@@ -54,14 +52,9 @@ class ArticlesController < ApplicationController
   		end  
 	end
  
-	def featured
- 		 if params[:featured].present? 
-   		 @articles = Article.find(params[:featured])
- 		 else 
-   		 @articles = Article.all
-  		end  
-	end
-
+  
+ 
+	  
 
 
 

@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
 
 	def index
 		@articles = Article.featured_article + Article.unfeatured_article 
+
   		 
 	end
 	def show
@@ -51,7 +52,8 @@ class ArticlesController < ApplicationController
    		 @articles = Article.all
   		end  
 	end
- 
+
+	 
   
  
 	  

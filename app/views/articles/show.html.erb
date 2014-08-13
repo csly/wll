@@ -51,7 +51,11 @@
 <td width="85%" valign="top"><h3><span class="deet"><% @article.tags.any? %>
   <% @article.tags.each do |tag| %>
   <%= link_to tag.name, tagged_url(:tag => tag.name) %>
-<% end %></span></h3></td>
+
+<% end %>
+  
+ 
+</span></h3></td>
 </tr>
 
 

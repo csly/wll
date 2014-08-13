@@ -2,6 +2,6 @@
 
 <%= render partial: 'form' %>
 
-<%= link_to "Delete Article", article_path(@article), method: :delete, data: {confirm:"Are You Sure You Want To Delete This?"} %><br /><br />
+&nbsp;<%= link_to "Delete Article", article_path(@article), class: 'myButton', method: :delete, data: {confirm:"Are You Sure You Want To Delete This?"} %><br /><br />
 
-<%= link_to "<< Back to Articles List", articles_path %>
+ &nbsp;<a href="../" class="myButton"><span>&nbsp;&lt; </span>Back To List</a>
